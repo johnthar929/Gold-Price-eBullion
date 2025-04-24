@@ -9,9 +9,8 @@ app.get('/ebullion', async (req, res) => {
   try {
     // Launch Puppeteer with the correct executable path for Render environment
     browser = await puppeteer.launch({
-      executablePath: '/usr/bin/google-chrome-stable',  // Path to Chromium on Render
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      headless: true
+       args: ['--no-sandbox', '--disable-setuid-sandbox'],
+       headless: true
     });
 
     const page = await browser.newPage();
